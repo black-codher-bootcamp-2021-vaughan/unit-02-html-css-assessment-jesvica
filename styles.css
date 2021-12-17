@@ -6,7 +6,48 @@
     box-sizing: border-box;
 }*/
 
+#logo {
+  font-family: "Baloo Bhaijaan 2", cursive;
+  font-size: 25px;
+  font-weight: 800;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding-bottom: 50px;
+}
+
+#aboutMe {
+  padding: 10px;
+  margin: 100px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(219, 84, 57, 0.3);
+  border-radius: 10px;
+  display: center;
+}
+
+.button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 7px;
+  display: inline-block;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.button:hover {
+  transition-timing-function: ease-in-out;
+  transition: transform 0.2s;
+  transform: scale(1.2);
+}
+
 header {
+  text-align: left;
+  padding-bottom: 11px;
 }
 
 body {
@@ -15,41 +56,23 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  text-align: center;
 }
 
-#logo {
-  font-family: "Baloo Bhaijaan 2", cursive;
-  font-size: 25px;
-  font-weight: 800;
-  padding: 10px 10px;
-  text-decoration: none;
-  color: black;
-}
-
-#logo a:hover {
-  color: red;
-}
-
-/* Links in top right corner */
-.nav-links {
-  float: right;
-  margin-right: 18px;
-  font-size: 19px;
-  font-weight: 700;
+/* Links */
+.p-links {
   color: white;
-}
-
-.nav-links a {
   text-decoration: none;
-  font-family: "Baloo Bhaijaan 2", cursive;
-  margin-right: 17px;
   letter-spacing: 0.3px;
-  transition: 0.3s;
+  font-weight: 900;
 }
 
-.nav-links a:hover {
+button:hover {
+  color: #fff !important;
   opacity: 0.7;
-  text-shadow: 1.5px 1.5px #c2bfc1;
+  text-shadow: 1px 1px grey;
+  transition: 0.3s;
+  font-size: 20px;
 }
 
 a:hover,
@@ -58,96 +81,24 @@ a:active {
   color: inherit;
 }
 
-/* Top intro section */
-section .hero {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /* All sections */
 section {
   margin: 0px 15px;
   padding-bottom: 5px;
 }
 
-/* Top intro section - circle and square */
-.container {
-  width: 90%;
-  height: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: -2;
-}
-
-/*
-.square {
-  width: 300px;
-  height: 300px;
-  background-color: #f39a9d;
-  border-radius: 8px;
-  box-shadow: 4px 3px 0px 0px rgb(169, 169, 169, 0.2);
-}
-
-.circle {
-  height: 550px;
-  width: 550px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #cbe8ba;
-  margin-left: -100px;
-  z-index: -1;
-  box-shadow: 3.5px 0px 0px 1px rgba(97, 96, 96, 0.1);
-}
-
-.circle h1 {
-  font-size: 50px;
-}
-
-.circle h3 {
-  margin-top: -60px;
-} */
-
-/* Phone view */
-@media only screen and (max-width: 800px) {
-  footer {
-    bottom: 0;
-    font-size: 15px;
-    position: fixed;
-  }
-  .container {
-    flex-direction: column;
-    width: 100%;
-    margin: 0 10px;
-  }
-  .square {
-    width: 200px;
-    height: 200px;
-    margin-top: 5px;
-  }
-  .circle {
-    width: 250px;
-    height: 250px;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 /* Font */
 h1 {
   font-family: "Baloo Bhaijaan 2", cursive;
-  color: #FFF8E8;
+  color: #fff8e8;
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
-  color: lightblue;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+  margin-top: -20px;
 }
 
 h4 {
@@ -157,30 +108,150 @@ h4 {
 
 p,
 li,
-ol, ul {
+ol,
+ul {
   font-family: "Montserrat", sans-serif;
   color: #fafafa;
 }
 
 hr {
   width: 50%;
-  background-color: #FFF;
+  background-color: #fff;
   border: none;
   height: 1.5px;
 }
 
-#journey-title {
+.profile-img {
+  height: 100px;
+  width: 100px;
+}
+
+/* Timeline Grid */
+.timeline {
+  margin: 0 auto;
+  font-size: 15px;
+  width: 60%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  transition: transform 0.2s;
+  padding-bottom: 50px;
+}
+
+.timeline p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.timeline h3 {
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+.d1 {
+  background: rgb(126, 31, 134, 0.5);
+}
+
+.d2 {
+  background: rgb(182, 208, 148, 0.5);
+}
+
+.d3 {
+  background: rgb(255, 164, 0, 0.5);
+}
+
+.d4 {
+  background: rgb(254, 206, 233, 0.5);
+}
+
+.d5 {
+  background: rgb(219, 84, 57, 0.5);
+}
+
+.d6 {
+  background: rgb(68, 157, 209, 0.5);
+}
+
+.d7 {
+  background: rgb(144, 121, 153, 0.5);
+}
+
+.d8 {
+  background: rgb(51, 15, 10, 0.5);
+}
+
+.d9 {
+  background: rgb(218, 44, 56, 0.5);
+}
+
+.d1:hover,
+.d2:hover,
+.d3:hover,
+.d4:hover,
+.d5:hover,
+.d6:hover,
+.d7:hover,
+.d8:hover,
+.d9:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+.d1,
+.d2,
+.d3,
+.d4,
+.d5,
+.d6,
+.d7,
+.d8,
+.d9 {
+  margin: 5px;
+}
+
+.box {
+  padding: 5px;
+}
+/*end of grid*/
+
+#twitter-icon,
+#github-icon {
+  transform: scale(1.5);
+  color: #fff;
+  margin: 15px;
+}
+
+.projects li {
+  list-style-type: none;
+  margin: 2px;
 }
 
 /* Footer and social media links */
 footer {
   text-align: center;
 }
+
 .social-media {
   list-style: none;
+  margin: 0 auto;
 }
 
 .social-media li {
-  display: inline;
-  padding-left: 10px;
+  display: inline-flex;
+  margin: 5px;
+}
+
+#social-icon:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+/* Phone view */
+@media only screen and (max-width: 800px) {
+  footer {
+    bottom: 0;
+    font-size: 15px;
+    position: fixed;
+  }
 }
