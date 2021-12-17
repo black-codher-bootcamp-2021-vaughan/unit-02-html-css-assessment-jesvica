@@ -1,4 +1,4 @@
-[TODO: Replace with your Netflify status badge]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9c4f8742-f914-4aca-b347-8b44e838590b/deploy-status)](https://app.netlify.com/sites/jesvica/deploys)
 
 # HTML and CSS Assessment
 
